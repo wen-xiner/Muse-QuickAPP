@@ -1,0 +1,5 @@
+# Netlify 配置 — 拖拽部署模式
+
+# Functions 目录声明
+[functions]
+  directory = "netlify/functions"

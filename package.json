@@ -1,0 +1,29 @@
+{
+  "name": "muse_quickapp",
+  "version": "1.0.0",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build:h5": "vite build && node -e \"const{cpSync,rmSync,readdirSync,existsSync,mkdirSync}=require('fs');const{join}=require('path');const src='static';const dist='dist/static';if(!existsSync(dist))mkdirSync(dist,{recursive:true});readdirSync(src).forEach(f=>{const sp=join(src,f);const dp=join(dist,f);rmSync(dp,{recursive:true,force:true});cpSync(sp,dp,{recursive:true,force:true})});rmSync('dist/build',{recursive:true,force:true});if(existsSync('functions')){const fd='dist/functions';rmSync(fd,{recursive:true,force:true});cpSync('functions',fd,{recursive:true,force:true})}console.log('[postbuild] done')\"",
+    "dev:h5": "vite",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-5010420260626001",
+    "sass": "1.77",
+    "sharp": "^0.35.3",
+    "vite": "^5.2.8"
+  },
+  "dependencies": {
+    "@dcloudio/uni-components": "^3.0.0-alpha-5010420260626001",
+    "@dcloudio/uni-h5": "^3.0.0-alpha-5010420260626001",
+    "vue": "^3.4.21",
+    "vue-router": "^4.6.4"
+  }
+}

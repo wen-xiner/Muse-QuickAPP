@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+:root, page {
+	--bg: #FAF7F2;
+	--card-bg: #FFFFFF;
+	--card-secondary-bg: #F5E6D3;
+	--text-primary: #4A4A4A;
+	--text-secondary: #9B9B9B;
+	--accent: #9B7BB5;
+	--accent-light: #C4A4D4;
+	--hover-bg: #F5F0EB;
+	--tag-bg: #FFF9E6;
+	--bar-bg: #E5E5E5;
+	--danger: #FF3B30;
+	--success: #4CD964;
+	--warning: #FF9500;
+	--input-bg: #FAF7F2;
+	--border: #E8E5E0;
+	--shadow: rgba(0, 0, 0, 0.05);
+	--overlay: rgba(0, 0, 0, 0.4);
+	--white: #FFFFFF;
+}
+
+.dark {
+	--bg: #12121E;
+	--card-bg: #1E1E32;
+	--card-secondary-bg: #2A2A42;
+	--text-primary: #E8E8F0;
+	--text-secondary: #8E8EA0;
+	--accent: #B89DD4;
+	--accent-light: #D4B8E8;
+	--hover-bg: #2A2A42;
+	--tag-bg: #2A2A3E;
+	--bar-bg: #3A3A50;
+	--danger: #FF6B6B;
+	--success: #6BDF7A;
+	--warning: #FFB84D;
+	--input-bg: #282840;
+	--border: #3A3A50;
+	--shadow: rgba(0, 0, 0, 0.3);
+	--overlay: rgba(0, 0, 0, 0.6);
+	--white: #FFFFFF;
+}
+
+page {
+	background-color: var(--bg);
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	font-size: 14px;
+	color: var(--text-primary);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+	padding: 16px;
+}
+
+.card {
+	background-color: var(--card-bg);
+	border-radius: 16px;
+	padding: 16px;
+	margin-bottom: 16px;
+	box-shadow: 0 2px 8px var(--shadow);
+	transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.card-secondary {
+	background-color: var(--card-secondary-bg);
+}
+
+.btn-primary {
+	background-color: var(--accent);
+	color: var(--white);
+	border-radius: 24px;
+	padding: 12px 24px;
+	text-align: center;
+	font-size: 16px;
+	border: none;
+}
+
+.btn-primary:active {
+	opacity: 0.8;
+}
+
+.btn-secondary {
+	background-color: var(--card-secondary-bg);
+	color: var(--text-primary);
+	border-radius: 24px;
+	padding: 12px 24px;
+	text-align: center;
+	font-size: 14px;
+	border: none;
+}
+
+.section-title {
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--text-primary);
+	margin-bottom: 12px;
+}
+
+.text-primary {
+	color: var(--accent);
+}
+
+.text-secondary {
+	color: var(--text-secondary);
+}
+
+.text-dark {
+	color: var(--text-primary);
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.grid {
+	display: grid;
+}
+
+.mt-8 { margin-top: 8px; }
+.mt-12 { margin-top: 12px; }
+.mt-16 { margin-top: 16px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; }

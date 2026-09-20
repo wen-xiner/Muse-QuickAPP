@@ -1,0 +1,158 @@
+{
+	"pages": [
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "情绪日记本",
+				"navigationBarBackgroundColor": "#FAF7F2",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/diary/list",
+			"style": {
+				"navigationBarTitleText": "我的日记",
+				"navigationBarBackgroundColor": "#FAF7F2",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/chat/index",
+			"style": {
+				"navigationBarTitleText": "AI问答",
+				"navigationBarBackgroundColor": "#FAF7F2",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/regulation/index",
+			"style": {
+				"navigationBarTitleText": "情绪调节",
+				"navigationBarBackgroundColor": "#FAF7F2",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/user/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor": "#FAF7F2",
+				"navigationBarTextStyle": "black"
+			}
+		}
+	],
+	"subPackages": [
+		{
+			"root": "pages/diary",
+			"pages": [
+				{
+					"path": "edit",
+					"style": {
+						"navigationBarTitleText": "写日记",
+						"navigationBarBackgroundColor": "#FAF7F2",
+						"navigationBarTextStyle": "black"
+					}
+				},
+				{
+					"path": "detail",
+					"style": {
+						"navigationBarTitleText": "日记详情",
+						"navigationBarBackgroundColor": "#FAF7F2",
+						"navigationBarTextStyle": "black"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/chat",
+			"pages": [
+				{
+					"path": "conversation",
+					"style": {
+						"navigationBarTitleText": "AI对话",
+						"navigationBarBackgroundColor": "#FAF7F2",
+						"navigationBarTextStyle": "black"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/onboarding",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationStyle": "custom",
+						"backgroundColor": "#FAF7F2"
+					}
+				}
+			]
+		}
+	],
+	"preloadRule": {
+		"pages/index/index": {
+			"network": "all",
+			"packages": ["pages/diary"]
+		},
+		"pages/diary/list": {
+			"network": "all",
+			"packages": ["pages/diary"]
+		},
+		"pages/chat/index": {
+			"network": "wifi",
+			"packages": ["pages/chat"]
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "情绪日记本",
+		"navigationBarBackgroundColor": "#FAF7F2",
+		"backgroundColor": "#FAF7F2"
+	},
+	"tabBar": {
+		"color": "#9B9B9B",
+		"selectedColor": "#9B7BB5",
+		"backgroundColor": "#FAF7F2",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabs/home.png",
+				"selectedIconPath": "static/tabs/home-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/diary/list",
+				"iconPath": "static/tabs/diary.png",
+				"selectedIconPath": "static/tabs/diary-active.png",
+				"text": "日记"
+			},
+			{
+				"pagePath": "pages/chat/index",
+				"iconPath": "static/tabs/chat.png",
+				"selectedIconPath": "static/tabs/chat-active.png",
+				"text": "AI问答"
+			},
+			{
+				"pagePath": "pages/regulation/index",
+				"iconPath": "static/tabs/regulation.png",
+				"selectedIconPath": "static/tabs/regulation-active.png",
+				"text": "调节"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"iconPath": "static/tabs/user.png",
+				"selectedIconPath": "static/tabs/user-active.png",
+				"text": "我的"
+			}
+		]
+	},
+	"uniIdRouter": {}
+}

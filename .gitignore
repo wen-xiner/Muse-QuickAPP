@@ -1,0 +1,15 @@
+node_modules/
+dist/
+unpackage/
+.wrangler/
+.hbuilderx/
+.claude/
+.DS_Store
+services/config.js
+.env
+.env.production
+.env.local
+*.log
+*.local
+tests/__snapshots__/
+
